@@ -8,8 +8,11 @@ window.addEventListener('keyup', (e)=>{
     keySequence.push(e.key);
     keySequence.splice(-secret.length - 1, keySequence.length - secret.length);
     if(keySequence.join('').includes(secret)){
-        cornify_add();
-        alert("You found the code!");
+        for(let i = 0; i < 40; i++){
+            cornify_add();
+        }
+        
+        
     }
     console.log(keySequence);
 });
